@@ -1,0 +1,29 @@
+<Configuration>
+  <Name>Additional Overdue Notices</Name>
+  <Author>Atlas Systems, Inc.</Author>
+  <Version>1.0.0</Version>
+  <Active>true</Active>
+  <Type>Server</Type>
+  <Description>Sends notifications for requests in Customer Notified via E-Mail at regular intervals to remind patrons that they have items waiting to be picked up.</Description>
+  <Settings>
+    <Setting name="NVTGC" value="" type="string">
+      <Description>Comma-separated list of NVTGCs to process. Please list out all NVTGCs as they would appear in the NVTGC field on the Users form. If left blank, the addon will process requests from all NVTGCs.</Description>
+    </Setting>
+    <Setting name="EmailName" value="" type="string">
+      <Description>Name of the email template to send.</Description>
+    </Setting>
+    <Setting name="DaysBeforeNotices" value="21" type="string">
+      <Description>Number of days an item must be overdue before this addon begins sending additional overdue notices. This value should be greater than the value of your BorrowingOverdueNoticeTwo customization key.</Description>
+    </Setting>
+    <Setting name="NotificationTime" value="" type="string">
+      <Description>Time of day that notifications are to be sent in 24-hour time format. For example, 2:30 PM would be 1430, and 10:00 AM would be 1000. Depending on your SystemManagerAddonInterval customization key, notifications may not be sent at exactly this time.</Description>
+    </Setting>
+    <Setting name="NotificationDaysOfWeek" value="" type="string">
+      <Description>Comma-separated list of days of the week that notifications are to be sent. Do not abbreviate day names.</Description>
+    </Setting>
+  </Settings>
+  <Forms />
+  <Files>
+    <File>AdditionalOverdueNotices.lua</File>
+  </Files>
+</Configuration>
